@@ -1,2 +1,2 @@
-systemctl --user disable --now sync-files
-rm ~/.config/systemd/user/sync-files.service && systemctl --user daemon-reload && systemctl --user status sync-files
+systemctl --user disable --now sync-text
+rm ~/.config/systemd/user/sync-text.service && systemctl --user daemon-reload && systemctl --user status sync-text

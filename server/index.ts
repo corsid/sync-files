@@ -4,11 +4,11 @@ import { WebSocketServer } from "ws";
 import { mkdir, unlink, writeFile } from "node:fs/promises";
 
 function getServerPath(path: string) {
-  return `${homedir()}/text-sync-storage/${path.slice(1).replaceAll("/", "-")}`;
+  return `${homedir()}/sync-text-storage/${path.slice(1).replaceAll("/", "-")}`;
 }
 
 try {
-  await mkdir(`${homedir()}/text-sync-storage`);
+  await mkdir(`${homedir()}/sync-text-storage`);
 } catch (e) {
   if ((e as NodeJS.ErrnoException).code !== "EEXIST") {
     throw e;

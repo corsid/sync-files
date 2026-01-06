@@ -9,32 +9,25 @@ delimeter between paths is `//`
 systemctl --user set-environment FOLDER_PATHS="~/Documents//~/Desktop"
 ```
 
-restart
+useful commands
 
 ```bash
-systemctl --user restart sync-files
-```
-
-debug
-
-```bash
-journalctl --user  -u sync-files -n 30  -f
+systemctl --user restart sync-text
+journalctl --user -u sync-text -n 30 -f
 ```
 
 ## to do
 
-- [x] simplify init with a bash script
-
-- [x] push changes (websockets)
-- [ ] rename to text-sync
 - [ ] install android studio
-- [ ] pull changes (websockets)
+- [ ] pull changes on PC (check all differences once an hour, on boot)
+- [ ] push changes on shut down on PC
 - [ ] only if different
-- [ ] Android pull changes in a special folder
+- [ ] pull changes on Android
 
 ### later
 
 - [ ] JSON config?
 - [ ] universal node.js path
-- [ ] fix duplicate name when replacing / with - on server
+- [ ] change the structure to allow syncing root paths and external drives
+- [ ] fix duplicate name when replacing / with - on server (use some sort of hash?)
 - [ ] ws recover from errors

@@ -1,0 +1,11 @@
+[Unit]
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/user/sync-text/linux
+ExecStart=/home/user/.nvm/versions/node/v24.12.0/bin/node /home/user/sync-text/linux/dist/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

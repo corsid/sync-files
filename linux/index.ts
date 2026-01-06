@@ -16,7 +16,7 @@ ws.addEventListener("error", console.error);
 
 function startWatching() {
   watch(paths).on("all", (event, path) => {
-    if (!path.endsWith(".sf")) return;
+    if (!path.endsWith(".st")) return;
     getWsEvent(event, path)
       .then((e) => ws.send(JSON.stringify(e)))
       .catch(console.error);
